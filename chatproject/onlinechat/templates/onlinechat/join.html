@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Chat Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00bfa6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #00bfa6;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00d7b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Join Chat Room</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="key" placeholder="Enter Room Key" required>
+      <input type="text" name="nickname" placeholder="Enter Nickname" required>
+      <button type="submit">Enter</button>
+    </form>
+  </div>
+</body>
+</html>
