@@ -76,6 +76,3 @@ gunicorn chatproject.asgi:application \
 - Server memory is cleared on restart
 - Designed for temporary, private communication
 
-## License
-
-MIT License
